@@ -1,0 +1,23 @@
+SQL --> Data is stored in tabular form --> No exactly tabular it is scatered around and are connected 
+such that 1 data is connect to other is someway but to understand it we use table
+
+NoSQL --> Data is stored in form of objects
+NoSQL is a theory on which MongoDB is based on
+
+
+WHY
+Example, want to see chats years before stored due to databases and generally to store emailID,etc..
+
+
+BACKEND -- consists of "Application Server" and "DataBases Server"
+
+DataBase --> is not a different concept it is a part of backend
+
+DATABASE
+Collection -->Imagine you have a big bookshelf 📚, and on that bookshelf, you keep different folders. 
+Each folder contains pages with information about a specific topic.
+In a database, the bookshelf is like the database itself, and the folders are called collections.
+Each collection holds documents (like pages in a folder), which store actual data.
+
+For example:
+If you have a database for a school, you might have collections like:
