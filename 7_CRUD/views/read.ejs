@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="w-full h-full bg-zinc-900 p-10 text-white">
+        <div class="nav mb-8">
+            <a href="/" class="text-blue-500">Back to Home Page</a>
+        </div>
+        <h1 class="text-4xl tracking-tighter"><strong>All Users</strong></h1>
+        <hr class="mt-2 mb-4">
+        <div class="users flex gap-5 flex-wrap">
+            <!-- <div class="user max-w-72 p-4 bg-zinc-800 rounded-lg">
+                <div class="w-full h-52 rounded-lg bg-zinc-600"></div>
+                <h3 class="text-xl mt-3 tracking-tighter">Rishit Shrivastwa</h3>
+                <h5 class="text-zinc-500">rishit@gmail.com</h5>
+                <div class="flex gap-25 mt-2">
+                    <a href="" class="text-blue-500">Edit User</a>
+                    <a href="" class="text-red-600">Delete User</a>
+                </div> -->
+                <% if(users.length > 0){%>
+                    <% users.forEach(function(value) {%>
+                    <div class="user w-72 p-4 bg-zinc-800 rounded-lg">
+                        <div class="w-full h-52 rounded-lg bg-zinc-600"><img class="w-full h-full object-covered" src="<%= value.image %>" alt=""></div>
+                        <h3 class="text-xl mt-3 tracking-tighter"><%= value.name %></h3>
+                        <h5 class="text-zinc-500"><%= value.email %></h5>
+                        <div class="flex gap-25 mt-2">
+                            <a href="/edit/<%= value._id %>" class="text-blue-500">Edit User</a>
+                            <a href="/delete/<%= value.name%>" class="text-red-600">Delete User</a>
+                        </div>
+                    </div>
+                    <%})} else{%>
+                        <h1>No Users found...</h1>
+                    <% }%>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
